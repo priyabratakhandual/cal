@@ -10,6 +10,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <python.script>calculator.py</python.script>
+        <!-- Define SonarQube properties -->
+	<sonar.host.url>http://13.234.76.21:9000</sonar.host.url>
+        <sonar.login>squ_40530f37c3526cfba9fdb618c581ff97d30dfa97</sonar.login>
     </properties>
     
     <build>
@@ -34,6 +37,14 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <!-- Plugin for SonarQube analysis -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.0.2155</version>
+            </plugin>
         </plugins>
     </build>
 </project>
+
